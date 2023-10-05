@@ -59,6 +59,8 @@ document.querySelector('.button:last-child').addEventListener('click', copyConte
 function randomizeData() {
     var div1 = document.querySelector('.box'); // Get content of div1
     var div2 = document.querySelectorAll('.box')[1]; // Get div2
+    var div3 =  document.querySelectorAll('.box1');
+
 
     // Create a temporary div to parse the HTML content of div1
     var tempDiv = document.createElement('div');
@@ -93,7 +95,7 @@ function randomizeData() {
 
     // Shuffle the data within each column independently (excluding Rider Name and School)
     for (var colIndex = 0; colIndex < numColumns; colIndex++) {
-        if (colIndex !== 1 && colIndex !== 2 && colIndex !== 3) {
+        if (colIndex !== 0 && colIndex !== 1 && colIndex !== 2) {
             shuffleArray(columnsData[colIndex]);
         }
     }
@@ -187,6 +189,6 @@ function copyContent() {
     // You may need to adapt this part to your specific requirements
     // For example, you could open a new window or navigate to another page.
     // Here's a simplified example that shows an alert with the copied content:
-    alert("Copied Content to Competitor:\n" + div2Content);
+    alert("Copied Content to Competitor:\n");
 }
 
